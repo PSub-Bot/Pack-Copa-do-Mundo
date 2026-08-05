@@ -2,8 +2,8 @@ const CONFIG = {
   product: {
     name: "Kit Copa 2026",
     tagline: "Todos os templates oficiais das seleções em um único pack profissional.",
-    totalTemplates: 64,
-    totalSelecoes: 32,
+    totalTemplates: "+ de 60",
+    totalSelecoes: "+ de 48",
   },
 
   pricing: {
@@ -22,7 +22,7 @@ const CONFIG = {
     combo: {
       original: "R$ 164,00",
       atual: "R$ 127,00",
-      parcelas: "ou 3x de R$ 46,90",
+      parcelas: "ou 3x de R$ 36,90",
       checkoutUrl: "CHECKOUT_COMBO_URL",
       economia: "R$ 37,00",
     },
