@@ -32,18 +32,12 @@
 </head>
 <body>
 
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar template" hidden>
-    <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
-    <img id="lightbox-img" src="" alt="" />
-    <p id="lightbox-caption"></p>
-  </div>
 
   <header class="header">
     <div class="container header-inner">
 
       <nav class="nav" aria-label="Navegação principal">
         <a href="#beneficios">Benefícios</a>
-        <a href="#galeria">Galeria</a>
         <a href="#oferta">Oferta</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -63,7 +57,7 @@
             <span class="highlight">uniformes esportivos</span>
           </h1>
           <p class="hero-sub">
-            32 seleções. Frente, costas e mangas.<br />
+            + de 48 seleções. Frente, costas e mangas.<br />
             Vetorizados, organizados e prontos para sublimação.
           </p>
           <div class="hero-cta">
@@ -193,7 +187,7 @@
             <h3>Download imediato</h3>
             <p>Acesso instantâneo após a confirmação do pagamento. Comece a usar em minutos.</p>
           </div>
-          <div class="benefit-card reveal benefit-card--wide" data-reveal="fade-up" data-delay="0">
+          <div class="benefit-card reveal benefit-card--center" data-reveal="fade-up" data-delay="0">
             <div class="benefit-icon" aria-hidden="true">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
             </div>
@@ -205,18 +199,6 @@
       </div>
     </section>
 
-    <section class="gallery-section reveal" data-reveal="fade-up" id="galeria">
-      <div class="container">
-        <div class="section-eyebrow">Prévia dos templates</div>
-        <h2 class="section-title">Galeria de seleções</h2>
-        <p class="section-sub">Cada template entregue com acabamento profissional e pronto para produção.</p>
-        <div class="gallery-grid" id="gallery-grid" role="list"></div>
-        <div class="gallery-more reveal" data-reveal="fade-up">
-          <p>+ 24 seleções adicionais incluídas no pack</p>
-          <a id="gallery-btn" href="#oferta" class="btn btn-outline">Ver oferta completa</a>
-        </div>
-      </div>
-    </section>
 
     <section class="comparison-section reveal" data-reveal="fade-up" id="comparacao">
       <div class="container">
@@ -233,7 +215,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>32 seleções</td>
+                <td>+ de 48 seleções</td>
                 <td class="col-avulso"><span class="tag-no" aria-label="Não incluso">✕</span></td>
                 <td class="col-pack"><span class="tag-yes" aria-label="Incluso">✓</span></td>
               </tr>
@@ -269,86 +251,34 @@
     </section>
 
     <section class="offer-section" id="oferta">
-      <div class="container">
-        <div class="section-eyebrow reveal" data-reveal="fade-up">Oferta especial de lançamento</div>
-        <h2 class="section-title reveal" data-reveal="fade-up">Garanta o seu kit agora</h2>
-        <div class="offer-grid">
+      <div class="container offer-container-single">
+        <div class="offer-grid offer-grid--single">
 
-          <div class="offer-card reveal" data-reveal="fade-up" data-delay="0">
-            <div class="offer-card-label">Pack Principal</div>
+          <div class="offer-card offer-card--combo offer-card--copa-main reveal" data-reveal="fade-up" data-delay="0">
+            <div class="combo-badge" aria-label="Popular">
+              ⚡ POPULAR!
+            </div>
+            <div class="offer-card-label">Pack oficial</div>
             <h3 class="offer-card-name" id="offer-copa-name">Kit Copa 2026</h3>
             <div class="offer-price-wrap">
-              <span class="price-old" id="offer-copa-old"></span>
-              <span class="price-new" id="offer-copa-new"></span>
+              <span class="price-old price-old--lg" id="offer-copa-old"></span>
+              <span class="price-new price-new--lg" id="offer-copa-new"></span>
             </div>
-            <span class="price-parcelas" id="offer-copa-parcelas"></span>
-            <ul class="offer-features" aria-label="O que está incluso">
-              <li><span aria-hidden="true">✓</span> 32 seleções completas</li>
+            <span class="price-parcelas price-parcelas--lg" id="offer-copa-parcelas"></span>
+            <ul class="offer-features offer-features--combo" aria-label="O que está incluso">
+              <li><span aria-hidden="true">✓</span> + de 48 seleções</li>
               <li><span aria-hidden="true">✓</span> Frente, costas e mangas</li>
               <li><span aria-hidden="true">✓</span> Arquivos vetoriais</li>
               <li><span aria-hidden="true">✓</span> Organizado por seleção</li>
               <li><span aria-hidden="true">✓</span> Download imediato</li>
             </ul>
-            <a id="offer-copa-btn" href="#" class="btn btn-primary btn-lg ripple btn-full">
+            <a id="offer-copa-btn" href="#" class="btn btn-combo btn-xl ripple btn-full">
               Quero o Kit Copa 2026
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-            <p class="secure-badge">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              Pagamento 100% seguro
-            </p>
-          </div>
-
-          <div class="offer-card offer-card--europa reveal" data-reveal="fade-up" data-delay="120">
-            <div class="offer-card-label">Novidade</div>
-            <h3 class="offer-card-name">Pack Europa 26/27</h3>
-            <div class="offer-price-wrap">
-              <span class="price-old" id="offer-europa-old"></span>
-              <span class="price-new" id="offer-europa-new"></span>
-            </div>
-            <span class="price-parcelas" id="offer-europa-parcelas"></span>
-            <ul class="offer-features" aria-label="O que está incluso">
-              <li><span aria-hidden="true">✓</span> Principais clubes europeus</li>
-              <li><span aria-hidden="true">✓</span> Uniformes 2026/27</li>
-              <li><span aria-hidden="true">✓</span> Arquivos vetoriais</li>
-              <li><span aria-hidden="true">✓</span> Novos modelos exclusivos</li>
-              <li><span aria-hidden="true">✓</span> Download imediato</li>
-            </ul>
-
-            <a id="offer-europa-btn" href="#" class="btn btn-outline btn-lg btn-full ripple">
-              Quero o Pack Europa
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-
-          <div class="offer-card offer-card--combo reveal" data-reveal="fade-up" data-delay="60" id="combo-card">
-            <div class="combo-badge" aria-label="Melhor negócio">
-              ⚡ POPULAR! O MAIS VENDIDO
-            </div>
-            <div class="offer-card-label">Combo exclusivo</div>
-            <h3 class="offer-card-name">Copa + Europa</h3>
-            <div class="combo-economia" id="combo-economia-wrap">
-              Economize <strong id="combo-economia"></strong>
-            </div>
-            <div class="offer-price-wrap">
-              <span class="price-old price-old--lg" id="offer-combo-old"></span>
-              <span class="price-new price-new--lg" id="offer-combo-new"></span>
-            </div>
-            <span class="price-parcelas price-parcelas--lg" id="offer-combo-parcelas"></span>
-            <ul class="offer-features offer-features--combo" aria-label="Tudo incluso no combo">
-              <li><span aria-hidden="true">✓</span> Tudo do Kit Copa 2026</li>
-              <li><span aria-hidden="true">✓</span> Tudo do Pack Europa 26/27</li>
-              <li><span aria-hidden="true">✓</span> Arquivos vetoriais</li>
-              <li><span aria-hidden="true">✓</span> Economia máxima</li>
-              <li><span aria-hidden="true">✓</span> Download imediato</li>
-            </ul>
-            <a id="offer-combo-btn" href="#" class="btn btn-combo btn-xl ripple btn-full">
-              Quero o Combo completo
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <p class="secure-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              Melhor preço garantido
+              Pagamento 100% seguro
             </p>
           </div>
 
