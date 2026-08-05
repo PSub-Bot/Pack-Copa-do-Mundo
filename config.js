@@ -30,15 +30,10 @@ const CONFIG = {
 
   media: {
     heroImage: "assets/images/HERO_MOCKUP.png",
-    logo: "assets/images/LOGO.png",
     videoUrl: "VIDEO_YOUTUBE_EMBED_URL",
-    europaPack: "assets/images/EUROPA_PACK_MOCKUP.png",
   },
 
   contact: {
-    whatsapp: "5500000000000",
-    whatsappMsg: "Olá! Tenho interesse no Kit Copa 2026.",
-    instagram: "https://instagram.com/SEU_PERFIL",
     email: "contato@seusite.com.br",
   },
 
@@ -74,17 +69,14 @@ const CONFIG = {
       q: "Após a compra, como recebo os arquivos?",
       a: "Imediatamente após a confirmação do pagamento você receberá o link de download por e-mail. O acesso é vitalício.",
     },
-    {
-      q: "Posso usar nos meus produtos para venda?",
-      a: "Sim. A licença comercial está inclusa. Você pode usar os templates para produção e venda de uniformes personalizados.",
-    },
+
     {
       q: "As artes são prontas ou preciso editar?",
       a: "As artes já vêm finalizadas e organizadas por seleção. Você pode usá-las diretamente ou personalizar com nome e número do jogador.",
     },
     {
       q: "Há suporte após a compra?",
-      a: "Sim, oferecemos suporte via WhatsApp para qualquer dúvida técnica sobre o uso dos arquivos.",
+      a: "Sim, oferecemos suporte por e-mail para qualquer dúvida técnica sobre o uso dos arquivos.",
     },
   ],
 };
