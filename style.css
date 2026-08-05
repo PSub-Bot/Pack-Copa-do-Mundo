@@ -1108,17 +1108,20 @@ a { color: inherit; text-decoration: none; }
 .offer-container-single {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .offer-grid--single {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 520px;
   width: 100%;
-  margin-top: 0;
 }
 
 .offer-card--copa-main {
+  width: 100%;
   margin-top: 24px;
 }
 
