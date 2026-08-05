@@ -102,108 +102,9 @@
     setEl("offer-copa-old", pr.copa.original);
     setEl("offer-copa-new", pr.copa.atual);
     setEl("offer-copa-parcelas", pr.copa.parcelas);
-    setEl("offer-europa-old", pr.europa.original);
-    setEl("offer-europa-new", pr.europa.atual);
-    setEl("offer-europa-parcelas", pr.europa.parcelas);
-    setEl("offer-combo-old", pr.combo.original);
-    setEl("offer-combo-new", pr.combo.atual);
-    setEl("offer-combo-parcelas", pr.combo.parcelas);
-    setEl("combo-economia", pr.combo.economia);
     setEl("comparison-price", pr.copa.atual);
 
     setCheckoutLink("offer-copa-btn", pr.copa.checkoutUrl);
-    setCheckoutLink("offer-europa-btn", pr.europa.checkoutUrl);
-    setCheckoutLink("offer-combo-btn", pr.combo.checkoutUrl);
-  }
-
-  /* ── GALLERY ──────────────────────────────── */
-  function initGallery() {
-    const grid = document.getElementById("gallery-grid");
-    if (!grid) return;
-
-    CONFIG.gallery.forEach(function (item) {
-      const card = document.createElement("article");
-      card.className = "gallery-card reveal";
-      card.setAttribute("data-reveal", "fade-up");
-      card.setAttribute("role", "listitem");
-      card.setAttribute("aria-label", "Template " + item.name);
-
-      const isPlaceholder = !item.image || item.image.includes("/selecao/");
-
-      card.innerHTML = `
-        <div class="gallery-card-img">
-          ${isPlaceholder
-          ? `<div class="gallery-img-placeholder">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                <span>${item.name}</span>
-              </div>`
-          : `<img src="${escapeHtml(item.image)}" alt="Template ${escapeHtml(item.name)}" loading="lazy" width="300" height="400" />`
-        }
-        </div>
-        <div class="gallery-card-footer">
-          <span class="gallery-card-name">${escapeHtml(item.name)}</span>
-          <button class="gallery-zoom" aria-label="Ampliar template ${escapeHtml(item.name)}" data-name="${escapeHtml(item.name)}" data-src="${isPlaceholder ? "" : escapeHtml(item.image)}">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
-          </button>
-        </div>
-      `;
-
-      grid.appendChild(card);
-
-      const zoomBtn = card.querySelector(".gallery-zoom");
-      if (zoomBtn) {
-        zoomBtn.addEventListener("click", function (e) {
-          e.stopPropagation();
-          openLightbox(this.dataset.src, this.dataset.name);
-        });
-      }
-
-      card.addEventListener("click", function () {
-        const btn = this.querySelector(".gallery-zoom");
-        if (btn) openLightbox(btn.dataset.src, btn.dataset.name);
-      });
-    });
-  }
-
-  /* ── LIGHTBOX ─────────────────────────────── */
-  function initLightbox() {
-    const lb = document.getElementById("lightbox");
-    const closeBtn = document.getElementById("lightbox-close");
-
-    if (!lb || !closeBtn) return;
-
-    closeBtn.addEventListener("click", closeLightbox);
-    lb.addEventListener("click", function (e) {
-      if (e.target === lb) closeLightbox();
-    });
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape") closeLightbox();
-    });
-  }
-
-  function openLightbox(src, name) {
-    const lb = document.getElementById("lightbox");
-    const img = document.getElementById("lightbox-img");
-    const cap = document.getElementById("lightbox-caption");
-    if (!lb || !img) return;
-
-    if (src) {
-      img.src = src;
-      img.alt = name || "";
-      img.style.display = "block";
-    } else {
-      img.style.display = "none";
-    }
-
-    if (cap) cap.textContent = name || "";
-    lb.hidden = false;
-    document.body.style.overflow = "hidden";
-  }
-
-  function closeLightbox() {
-    const lb = document.getElementById("lightbox");
-    if (lb) lb.hidden = true;
-    document.body.style.overflow = "";
   }
 
   /* ── FAQ ──────────────────────────────────── */
@@ -333,8 +234,6 @@
     initHero();
     initVideo();
     initPrices();
-    initGallery();
-    initLightbox();
     initFaq();
     initReveal();
     initHeader();
