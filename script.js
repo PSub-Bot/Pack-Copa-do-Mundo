@@ -48,36 +48,13 @@
 
   /* ── LOGOS & BRAND ────────────────────────── */
   function initBrand() {
-    const m = CONFIG.media;
     const c = CONFIG.contact;
-    const p = CONFIG.product;
-
-    setImgSrc("header-logo", m.logo, "Logo");
-    setImgSrc("footer-logo", m.logo, "Logo");
-
-    const tagEl = document.getElementById("footer-tagline");
-    if (tagEl) tagEl.textContent = p.tagline;
 
     const yearEl = document.getElementById("footer-year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    const wa = document.getElementById("footer-whatsapp");
-    if (wa) wa.href = `https://wa.me/${c.whatsapp}?text=${encodeURIComponent(c.whatsappMsg)}`;
-
-    const ig = document.getElementById("footer-instagram");
-    if (ig) ig.href = c.instagram;
-
     const em = document.getElementById("footer-email");
     if (em) em.href = `mailto:${c.email}`;
-  }
-
-  function setImgSrc(id, src, alt) {
-    const el = document.getElementById(id);
-    if (!el) return;
-    if (src && !src.startsWith("assets/images/LOGO") && src !== "") {
-      el.src = src;
-      if (alt) el.alt = alt;
-    }
   }
 
   /* ── HERO ─────────────────────────────────── */
@@ -137,19 +114,6 @@
     setCheckoutLink("offer-copa-btn", pr.copa.checkoutUrl);
     setCheckoutLink("offer-europa-btn", pr.europa.checkoutUrl);
     setCheckoutLink("offer-combo-btn", pr.combo.checkoutUrl);
-
-    const europaImg = document.getElementById("europa-image");
-    const europaPlaceholder = document.getElementById("europa-placeholder");
-    const europaWrap = document.querySelector(".europa-mockup-wrap");
-    if (CONFIG.media.europaPack && !CONFIG.media.europaPack.startsWith("assets/images/EUROPA")) {
-      if (europaImg) {
-        europaImg.src = CONFIG.media.europaPack;
-        europaImg.style.display = "block";
-      }
-      if (europaPlaceholder) europaPlaceholder.style.display = "none";
-    } else {
-      if (europaImg) europaImg.style.display = "none";
-    }
   }
 
   /* ── GALLERY ──────────────────────────────── */
