@@ -8,23 +8,23 @@ const CONFIG = {
 
   pricing: {
     copa: {
-      original: "R$ 297,00",
-      atual: "R$ 97,00",
-      parcelas: "ou 3x de R$ 35,90",
+      original: "R$ 97,00",
+      atual: "R$ 67,00",
+      parcelas: "ou 3x de R$ 24,90",
       checkoutUrl: "CHECKOUT_COPA_URL",
     },
     europa: {
-      original: "R$ 197,00",
-      atual: "R$ 67,00",
-      parcelas: "ou 3x de R$ 24,90",
+      original: "R$ 127,00",
+      atual: "R$ 97,00",
+      parcelas: "ou 3x de R$ 35,90",
       checkoutUrl: "CHECKOUT_EUROPA_URL",
     },
     combo: {
-      original: "R$ 494,00",
-      atual: "R$ 147,00",
-      parcelas: "ou 3x de R$ 52,90",
+      original: "R$ 164,00",
+      atual: "R$ 127,00",
+      parcelas: "ou 3x de R$ 46,90",
       checkoutUrl: "CHECKOUT_COMBO_URL",
-      economia: "R$ 347,00",
+      economia: "R$ 37,00",
     },
   },
 
@@ -58,7 +58,7 @@ const CONFIG = {
     { name: "Espanha", image: "assets/images/selecao/espanha.jpg" },
     { name: "Portugal", image: "assets/images/selecao/portugal.jpg" },
     { name: "Inglaterra", image: "assets/images/selecao/inglaterra.jpg" },
-    { name: "Itália", image: "assets/images/selecao/italia.jpg" },
+    { name: "Holanda", image: "assets/images/selecao/holanda.jpg" },
   ],
 
   faq: [
