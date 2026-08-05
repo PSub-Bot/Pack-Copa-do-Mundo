@@ -1100,13 +1100,33 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ─── RESPONSIVE ─────────────────────────────── */
-@media (max-width: 1024px) {
-  .offer-grid { grid-template-columns: 1fr 1fr; }
-  .offer-card--combo { grid-column: span 2; }
-  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
-  .benefit-card--wide { grid-column: span 1; }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+
+.benefit-card--center {
+  grid-column: 2;
 }
+
+.offer-container-single {
+  display: flex;
+  justify-content: center;
+}
+
+.offer-grid--single {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 520px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.offer-card--copa-main {
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .benefit-card--center { grid-column: auto; }
+}
+
+
 
 @media (max-width: 768px) {
   .hero-inner { grid-template-columns: 1fr; gap: 48px; }
