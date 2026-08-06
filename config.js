@@ -30,7 +30,7 @@ const CONFIG = {
 
   media: {
     heroImage: "assets/images/HERO_MOCKUP.png",
-    videoUrl: "videoUrl: "https://www.youtube.com/embed/LyqHOrsIjds",",
+    videoUrl: "videoUrl: "https://www.youtube.com/embed/LyqHOrsIjds",
   },
 
   contact: {
