@@ -10,8 +10,8 @@ const CONFIG = {
     copa: {
       original: "R$ 97,00",
       atual: "R$ 67,00",
-      parcelas: "ou 3x de R$ 24,90",
-      checkoutUrl: "CHECKOUT_COPA_URL",
+      parcelas: "ou 3x de R$ 36,90",
+    checkoutUrl: "https://pay.kiwify.com.br/AzQOqkE",
     },
     europa: {
       original: "R$ 127,00",
@@ -30,7 +30,7 @@ const CONFIG = {
 
 
   contact: {
-    email: "contato@seusite.com.br",
+    email: "paulosffo@gmail.com",
   },
 
   seo: {
