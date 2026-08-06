@@ -28,10 +28,6 @@ const CONFIG = {
     },
   },
 
-  media: {
-    heroImage: "assets/images/HERO_MOCKUP.png",
-    videoUrl: "https://www.youtube.com/embed/LyqHOrsIjds",
-  },
 
   contact: {
     email: "contato@seusite.com.br",
