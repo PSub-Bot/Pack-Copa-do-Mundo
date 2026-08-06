@@ -245,10 +245,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 48px;
 }
 
 .hero-title {
@@ -271,9 +272,10 @@ a { color: inherit; text-decoration: none; }
   color: var(--text-2);
   line-height: 1.7;
   margin-bottom: 36px;
+  max-width: 560px;
 }
 
-.hero-cta { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; margin-bottom: 48px; }
+.hero-cta { display: flex; flex-direction: column; gap: 12px; align-items: center; margin-bottom: 48px; }
 
 .hero-guarantee {
   display: flex;
@@ -1132,10 +1134,7 @@ a { color: inherit; text-decoration: none; }
 
 
 @media (max-width: 768px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-title { font-size: clamp(2rem, 8vw, 2.75rem); }
-  .hero-visual { order: -1; }
-  .hero-mockup-wrap { max-width: 380px; }
   .nav { display: none; }
   .benefits-grid { grid-template-columns: 1fr; }
   .benefit-card--wide { grid-column: span 1; }
