@@ -8,9 +8,9 @@ const CONFIG = {
 
   pricing: {
     copa: {
-      original: "R$ 97,00",
-      atual: "R$ 67,00",
-      parcelas: "ou 3x de R$ 36,90",
+      original: "R$ 46,90",
+      atual: "R$ 36,90",
+      parcelas: "ou 3x de R$ 13,17",
     checkoutUrl: "https://pay.kiwify.com.br/AzQOqkE",
     },
     europa: {
