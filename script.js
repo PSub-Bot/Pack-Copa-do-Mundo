@@ -57,54 +57,22 @@
     if (em) em.href = `mailto:${c.email}`;
   }
 
-  /* ── HERO ─────────────────────────────────── */
-  function initHero() {
-    const m = CONFIG.media;
-    const pr = CONFIG.pricing;
-    const p = CONFIG.product;
-
-    const heroImg = document.getElementById("hero-image");
-    const heroPlaceholder = document.getElementById("hero-placeholder");
-    if (heroImg && m.heroImage && !m.heroImage.startsWith("assets/images/HERO")) {
-      heroImg.src = m.heroImage;
-      heroImg.style.display = "block";
-      if (heroPlaceholder) heroPlaceholder.style.display = "none";
-    } else {
-      if (heroImg) heroImg.style.display = "none";
-    }
-
-    setEl("stat-templates", p.totalTemplates);
-    setEl("stat-selecoes", p.totalSelecoes);
-
-    setCheckoutLink("hero-btn", pr.copa.checkoutUrl);
-    setCheckoutLink("cta-btn", pr.copa.checkoutUrl);
-  }
-
-  /* ── VIDEO ────────────────────────────────── */
-  function initVideo() {
-    const url = CONFIG.media.videoUrl;
-    const iframe = document.getElementById("video-iframe");
-    const placeholder = document.getElementById("video-placeholder");
-
-    if (url && url !== "VIDEO_YOUTUBE_EMBED_URL" && url.startsWith("http")) {
-      if (iframe) {
-        iframe.src = url;
-        iframe.style.display = "block";
-      }
-      if (placeholder) placeholder.style.display = "none";
-    }
-  }
-
   /* ── PRICES ───────────────────────────────── */
   function initPrices() {
     const pr = CONFIG.pricing;
+    const p = CONFIG.product;
+
+    setEl("stat-templates", p.totalTemplates);
+    setEl("stat-selecoes", p.totalSelecoes);
 
     setEl("offer-copa-old", pr.copa.original);
     setEl("offer-copa-new", pr.copa.atual);
     setEl("offer-copa-parcelas", pr.copa.parcelas);
     setEl("comparison-price", pr.copa.atual);
 
+    setCheckoutLink("hero-btn", pr.copa.checkoutUrl);
     setCheckoutLink("offer-copa-btn", pr.copa.checkoutUrl);
+    setCheckoutLink("cta-btn", pr.copa.checkoutUrl);
   }
 
   /* ── FAQ ──────────────────────────────────── */
@@ -231,8 +199,6 @@
   function init() {
     initMeta();
     initBrand();
-    initHero();
-    initVideo();
     initPrices();
     initFaq();
     initReveal();
